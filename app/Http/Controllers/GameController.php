@@ -86,7 +86,7 @@ class GameController extends Controller
 
     public function getGamecategoriesByGames($gamecategoryId)
     {
-        $query = Script::where('category_id', $gamecategoryId);
+        $query = Game::where('category_id', $gamecategoryId);
 
         return $query;
     }
