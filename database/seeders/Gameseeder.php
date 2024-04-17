@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use app\models\Game;
+use App\Models\Game;
 
 class Gameseeder extends Seeder
 {
