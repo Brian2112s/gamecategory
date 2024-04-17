@@ -4,8 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Gamecategory;
 
-class Gamecategoryseeder extends Seeder
+class GamecategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
