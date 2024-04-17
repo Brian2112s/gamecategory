@@ -48,5 +48,5 @@ class Gameseeder extends Seeder
         foreach ($games as $game) {
             Game::create($game);
         }
-    }
+    }//test
 }
