@@ -9,9 +9,9 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('/gamecategories/{id}/games', GameController::class);
-Route::get('/games?sort={veld}', [GameController::class]);
-
+Route::get('/gamecategories/{id}/games', [GameController::class, 'getGamecategoriesByGames']);
+Route::get('/games?sort={veld}', [GameController::class, 'index']);
 
 Route::apiResource('games', GameController::class);
-Route::apiResource('gamecategories', GamecategoryController::class);
+Route::apiResource('gamecategories', GamecategoryController::class)
+?>

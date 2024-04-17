@@ -11,11 +11,13 @@ class GameController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index($sortField)
+    public function index(Request $request)
     {
+        $sortField = $request->query('sort');
+
         if (isset($sortField)) 
         {
-            $$games = Game::orderBy($sortField)->get();
+            $games = Game::orderBy($sortField)->get();
         } 
 
         else 
@@ -88,6 +90,8 @@ class GameController extends Controller
     {
         $query = Game::where('category_id', $gamecategoryId);
 
-        return $query;
+        $scripts = $query->get();
+
+        return $scripts;
     }
 }
